@@ -35,7 +35,7 @@ registerLocaleData(localeFr,'fr');
     RouterModule.forRoot([
       { path : 'home', component : HomeComponent },
       { path : '', redirectTo :'home',  pathMatch : 'full' },
-      { path : 'home/:id', component : HotelDetailComponent  },
+      { path : 'hotels/:id', component : HotelDetailComponent  },
       { path : 'hotels', component : HotellisteComponent  },
       { path : '**', redirectTo : 'home', pathMatch : 'full'}
 

@@ -24,8 +24,8 @@
         {{elementRecu}}
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3"  >
-        <div class="col mb-3" *ngFor="let hotel of filteredHotel">
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-3" *ngFor="let hotel of filteredHotel"> <!--Important : on prend chaque element de la liste d'hotels filtré. C'est d'ici qu'on a hotel-->
             <div class="card">
                 <img class="card-img-top" [src]="hotel.imageUrl" [title]="hotel.hotelName | uppercase"
                     [alt]="hotel.hotelName" />
@@ -34,9 +34,17 @@
                     <p class="card-text"> {{ hotel.description }} </p>
 
                     <p class="card-text">
-                        {{hotel.price  |   currency : 'FCFA' : 'symbol' : '1.2-2' : 'fr'  }}
+                        {{hotel.price | currency : 'FCFA' : 'symbol' : '1.2-2' : 'fr' }}
                     </p>
-                    <star-rating [rating]="hotel.rating" (starRatingClicked)="ratingReceived($event)" ></star-rating> 
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        <star-rating [rating]="hotel.rating" (starRatingClicked)="ratingReceived($event)"></star-rating>
+
+                        <span class="material-icons bg-info text-white p-2 rounded-circle btn"
+                        [routerLink]="['/hotels', this.hotel.hotelId]">
+                            keyboard_arrow_right
+                        </span>
+                    </div>
+
 
                     <span class="badge badge-pill badge-info" *ngIf="showBadge">Nouveau</span>
                 </div>

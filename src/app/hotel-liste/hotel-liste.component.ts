@@ -14,7 +14,7 @@ import { HotelListeService } from "./hotel-liste.service";
 export class HotellisteComponent implements OnInit {       
 
     public errMsg! : string;           
-    ngOnInit(): void { // permet de définir des actions lorsque le composant va se lancer à l'initialisation quoi
+    ngOnInit(): void { // permet de définir des actions lorsque le composant va se lancer à l'initialisation 
         this.hotelListes.getListHotels().subscribe({     // subscribe permet d'écouter les observables
             next : hotel => {                            // next correspond aux éléments qui arrive et met en 
                                                          //parametre ces elements
