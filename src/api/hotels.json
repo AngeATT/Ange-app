@@ -1,0 +1,24 @@
+[
+    {"hotelId": 1,
+     "hotelName" : "Pullman",
+     "description" : "L'hotel pullman n'est plus à présenter",
+     "price" :  150000,
+     "imageUrl" :"../../assets/the-interior.jpg",
+     "rating" : 4
+    },
+    {"hotelId" : 2,
+      "hotelName" : "Noom",
+      "description" : "Le noom grand concurrent du pullman",
+      "price" : 145000,
+      "imageUrl" :"../../assets/indoors.jpg",
+      "rating" : 3.5
+    },
+    {
+      "hotelId" : 3,
+      "hotelName" : "Hotel Saphir",
+      "description" : "Profitez du dangereux hotel saphir ",
+      "price" : 185000,
+      "imageUrl" :"../../assets/hotel-room.jpg",
+      "rating" : 4.5
+    }  
+  ]
