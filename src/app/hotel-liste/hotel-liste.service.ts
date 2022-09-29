@@ -18,7 +18,7 @@ export class HotelListeService {
 
     public getListHotels() : Observable<IHotel[]>{           // Notre méthode qui va se charger de soit envoyer les données recu en console avec le tap, soit d'appeler la fonciton de gstion d'erreur avec catchError les deux sont à importer de RxJS
         return this.http.get<IHotel[]>(this.HOTEL_API_URL).pipe(
-          tap(hotel => console.log("hotels : "+ hotel)),  // pour mettre en console ce qu'on reçoit 
+          /*tap(hotel => console.log("hotels : "+ hotel)), */  // pour mettre en console ce qu'on reçoit 
           catchError(this.handleError)
         )
         

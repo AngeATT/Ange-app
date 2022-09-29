@@ -14,6 +14,7 @@ import { HotellisteComponent } from './hotel-liste/hotel-liste.component';
 import { StartRatingComponent } from './shared/components/star-ratings.component.ts/star-rating.component';
 import { HomeComponent } from './home/home.component';
 import { HotelDetailComponent } from './hotel-liste/hotel-detail/hotel-detail.component';
+import { HotelDetailGuard } from './hotel-liste/hotel-detail.guard';
 
 
 
@@ -35,11 +36,9 @@ registerLocaleData(localeFr,'fr');
     RouterModule.forRoot([
       { path : 'home', component : HomeComponent },
       { path : '', redirectTo :'home',  pathMatch : 'full' },
-      { path : 'hotels/:id', component : HotelDetailComponent  },
+      { path : 'hotels/:id', component : HotelDetailComponent, canActivate : [HotelDetailGuard] },
       { path : 'hotels', component : HotellisteComponent  },
       { path : '**', redirectTo : 'home', pathMatch : 'full'}
-
-
     ])
   ],
   providers: [],
