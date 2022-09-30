@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { HotellisteComponent } from './hotel-liste/hotel-liste.component';
 import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
-import { StartRatingComponent } from '../shared/components/star-ratings.component.ts/star-rating.component';
-import { RouterModule } from '@angular/router';
 import { HotelDetailGuard } from './shared/guard/hotel-detail.guard';
-import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,14 +12,13 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     HotellisteComponent,
     HotelDetailComponent,
-    StartRatingComponent,
+    
   ],
   imports: [
-    CommonModule,
-    FormsModule,
     RouterModule.forChild([
       { path : 'hotels/:id', component : HotelDetailComponent, canActivate : [HotelDetailGuard] },
-      { path : 'hotels', component : HotellisteComponent  }])
+      { path : 'hotels', component : HotellisteComponent  }]),
+    SharedModule
   ]
 })
 export class HotelModule { }

@@ -17,7 +17,7 @@ export class HotelDetailGuard implements CanActivate {
       console.log(route);
       this.idHotel = +route.url[1].path;
 
-      if (this.idHotel < 0 || isNaN(this.idHotel) || this.idHotel > 2 ){
+      if (this.idHotel < 0 || isNaN(this.idHotel) || this.idHotel > 3 ){
         alert("Hotel introuvable");
         this.routeVersPageAcceuil.navigate(['/hotels']);
 
