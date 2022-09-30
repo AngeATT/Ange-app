@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { StartRatingComponent } from './shared/components/star-ratings.component.ts/star-rating.component';
 import { HomeComponent } from './home/home.component';
 import { HotelModule } from './hotels/hotel.module';
 
