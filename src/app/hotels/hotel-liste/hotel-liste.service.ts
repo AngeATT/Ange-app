@@ -1,11 +1,11 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
-import { IHotel } from "./hotel";
+import { IHotel } from "../shared/model/hotel";
 import { tap, catchError } from "rxjs";
 
 @Injectable({
-    providedIn : "root"     //permet de spécifier que ce service est disponible à usage pour tout le monde
+    providedIn : "root"     //permet de spécifier que ce service est disponible à usage pour tout le monde (root)
 })
 
 export class HotelListeService {

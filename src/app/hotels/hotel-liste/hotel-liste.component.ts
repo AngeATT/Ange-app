@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";  
 import { subscribeOn } from "rxjs";
-import {  IHotel } from "./hotel";
+import {  IHotel } from "../shared/model/hotel";
 import { HotelListeService } from "./hotel-liste.service";
 
 @Component(

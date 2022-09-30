@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IHotel } from '../hotel';
-import { HotelListeService } from '../hotel-liste.service';
+import { IHotel } from '../shared/model/hotel';
+import { HotelListeService } from '../hotel-liste/hotel-liste.service';
 
 @Component({
   selector: 'app-hotel-detail',
